@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sidebar"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_menu"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerInside"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/navMenuOptions"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_bookmark"
+            android:layout_marginTop="18dp"
+            android:scaleType="centerInside"
+            android:layout_below="@id/navMenuOptions"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/setBookmark"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_share"
+            android:layout_marginTop="18dp"
+            android:scaleType="centerInside"
+            android:layout_below="@id/setBookmark"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/share"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginTop="18dp"
+            android:scaleType="centerInside"
+            android:layout_alignParentBottom="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/info"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <project.tronku.newst.UtilityClass.VerticalViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/feed_vertical_viewpager"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/fetchLayout">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="0.6"
+                android:src="@drawable/fetching"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fetching News"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_regular"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
